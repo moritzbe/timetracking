@@ -29,4 +29,11 @@ class SiteController < ApplicationController
 		# end
   	end
 
+
+    def 
+      
+    end
+
+
+
 end
