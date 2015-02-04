@@ -1,7 +1,6 @@
 class Entry < ActiveRecord::Base
 	belongs_to :project
-	# validates :name, presence: true
-	# validates :name, uniqueness: true
-	# validates :name, length: {maximum: 30}
-	# validates :name, format: {with: /\A[0-9]/ }
+	validates :hours, presence: true
+	validates :minutes, presence: true
+	validates :comments, presence: true
 end

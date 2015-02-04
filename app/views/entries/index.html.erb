@@ -1,0 +1,15 @@
+<h1> Listfile </h1>
+
+
+<h3>Description</h3>
+
+<% @entries.each do |pj| %>
+	<% if pj.comments.nil?%>
+		<p><%=pj.comments%> - </p>
+		<%else%>
+		<p><%=pj.comments %></p>
+	<%end%>
+<%end%>
+
+<br>
+<br>

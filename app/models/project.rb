@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
 	validates :name, presence: true
 	validates :name, uniqueness: true
 	validates :name, length: {maximum: 30}
-	validates :name, format: {with: /\A[0-9]/ }
+	# validates :name, format: {with: /\A[0-9]/ }
 
 	def self.iron_find(id)
 		where("id = '#{id}'")
@@ -26,6 +26,8 @@ class Project < ActiveRecord::Base
 		p = Project.find(params[:project_id])
 		p.entries.where("created_at")
 	end
+
+
 
 
 end

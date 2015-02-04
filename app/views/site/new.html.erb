@@ -1,0 +1,23 @@
+<% if @project.errors.any? %>
+	 <% @project.errors.full_messages.each do |error_msg| %>
+	 <ul>
+	 <li><%= error_msg %></li>
+	 </ul>
+	 <% end %>
+<% end %>
+
+
+
+
+
+
+<h1> Entries </h1>
+<%= form_for [@project] do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+      <br>
+      <%= f.submit 'Save' %>
+    <%end%>
