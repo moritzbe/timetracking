@@ -24,6 +24,19 @@ class EntriesController < ApplicationController
   		end
   	end
 
+    def update
+      @project = Project.find(params[:project_id])
+      @entry = @project.entries.find(params[:id])
+      @entry.update_attributes(entry_params)
+      @entries= @project.entries
+      redirect_to action: "new"
+    end
+
+    def edit
+     @project = Project.find(params[:project_id])
+     @entry = @project.entries.find(params[:id])
+    end
+
   	private
   	def entry_params
   		params.require(:entry).permit(:hours, :minutes, :date, :comments)
