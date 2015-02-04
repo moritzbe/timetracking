@@ -4,12 +4,8 @@
 <h3>Description</h3>
 
 <% @entries.each do |pj| %>
-	<% if pj.comments.nil?%>
-		<p><%=pj.comments%> - </p>
-		<%else%>
-		<p><%=pj.comments %></p>
-	<%end%>
-<%end%>
+		<p><%=pj.comments%> <%=link_to('Delete', project_entry_path(@project, pj), method: :delete, data: {confirm: "are you sure"})%></p>
+		<%end%>
 
 <br>
 <br>
