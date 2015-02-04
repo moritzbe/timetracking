@@ -18,6 +18,7 @@ class EntriesController < ApplicationController
   		@project = Project.find(params[:project_id])
   		@entry = @project.entries.new entry_params
   		if @entry.save
+        flash[:notice] = "Entry created successfully"
   			redirect_to action: "new"
   		else
   			render "new"
