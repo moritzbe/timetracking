@@ -28,12 +28,4 @@ class SiteController < ApplicationController
 		# render 'no_projects_found'
 		# end
   	end
-
-
-    def 
-      
-    end
-
-
-
-end
+  end
